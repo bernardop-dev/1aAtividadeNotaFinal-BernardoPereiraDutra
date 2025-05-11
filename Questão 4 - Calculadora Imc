@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de IMC</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input, button {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            width: 80%;
+        }
+        #resultado {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculadora de IMC</h2>
+
+    <input type="number" id="peso" placeholder="Peso (kg)">
+    <input type="number" id="altura" placeholder="Altura (m)">
+    <button onclick="calcularIMC()">Calcular</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcularIMC() {
+            let peso = parseFloat(document.getElementById("peso").value);
+            let altura = parseFloat(document.getElementById("altura").value);
+            let res = document.getElementById("resultado");
+
+            if (!peso || !altura || peso <= 0 || altura <= 0) {
+                res.textContent = "Digite peso e altura válidos.";
+                res.style.color = "red";
+                return;
+            }
+
+            let imc = peso / (altura * altura);
+            let msg = "";
+
+            if (imc < 18.5) msg = "Abaixo do peso";
+            else if (imc < 25) msg = "Peso normal";
+            else if (imc < 30) msg = "Sobrepeso";
+            else msg = "Obesidade";
+
+            res.textContent = `IMC: ${imc.toFixed(2)} - ${msg}`;
+            res.style.color = "green";
+        }
+    </script>
+</body>
+</html>
