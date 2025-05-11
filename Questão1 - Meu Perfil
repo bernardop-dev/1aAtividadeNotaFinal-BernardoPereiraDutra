@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil Pessoal - Bernardo Pereira Dutra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .matricula {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #555;
+        }
+        .links {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .links a {
+            text-decoration: none;
+            color: #2980b9;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bernardo Pereira Dutra</h1>
+        <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+        <p><strong>Objetivo Profissional:</strong> Atuar como desenvolvedor backend, aplicando soluções eficientes para otimização de processos e análise de dados.</p>
+        <p class="matricula">Matrícula: 202408152132</p>
+        <div class="links">
+            <p>
+                <a href="https://www.linkedin.com/in/bernardop-d/" target="_blank">🔗 LinkedIn</a>
+                <a href="https://github.com/bernardop-dev" target="_blank">💻 GitHub</a>
+
+            </p>
+        </div>
+    </div>
+</body>
+</html>
