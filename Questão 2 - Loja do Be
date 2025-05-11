@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <h1 style="text-align:center;">Loja do Be - Caminhão virou = promoção chegou</h1>
+    <title>Atacadão das Frutas</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: black;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Atacadão das Frutas</h2>
+    <h3>Precinho de Camarada</h3>
+    <table>
+        <tr>
+            <th>Fruta</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>R$ 3,00</td>
+            <td>Fresca</td>
+            <td>Banana prata docinha</td>
+        </tr>
+        <tr>
+            <td>Maçã</td>
+            <td>R$ 4,50</td>
+            <td>Fresca</td>
+            <td>Maçã Fuji crocante</td>
+        </tr>
+        <tr>
+            <td>Melancia</td>
+            <td>R$ 2,00</td>
+            <td>Fresca</td>
+            <td>Melancia docinha</td>
+        </tr>
+        <tr>
+            <td>Abacaxi</td>
+            <td>R$ 5,00</td>
+            <td>Tropical</td>
+            <td>Abacaxi grande e doce</td>
+        </tr>
+    </table>
+</body>
+</html>
