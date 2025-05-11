@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Meu Contato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            padding: 20px;
+            color: #000;
+        }
+        .form-container {
+            background-color: #fff;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #000;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #000;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .message {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Fala Comigo meu nobre/minha nobre</h2>
+        <form id="contactForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+            <p class="message" id="msg"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            var nome = document.getElementById("nome");
+            var email = document.getElementById("email");
+            var mensagem = document.getElementById("mensagem");
+            var msg = document.getElementById("msg");
+            
+            nome.style.border = "1px solid #000";
+            email.style.border = "1px solid #000";
+            mensagem.style.border = "1px solid #000";
+            msg.textContent = '';
+
+            if (nome.value.trim() === "" || email.value.trim() === "" || mensagem.value.trim() === "") {
+                if (nome.value.trim() === "") nome.style.border = "1px solid red";
+                if (email.value.trim() === "") email.style.border = "1px solid red";
+                if (mensagem.value.trim() === "") mensagem.style.border = "1px solid red";
+                msg.style.color = "red";
+                msg.textContent = "Por favor, preencha todos os campos!";
+                return;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                email.style.border = "1px solid red";
+                msg.style.color = "red";
+                msg.textContent = "Digite um e-mail válido.";
+                return;
+            }
+
+            msg.style.color = "black";
+            msg.textContent = "Mensagem enviada com sucesso!";
+        });
+    </script>
+</body>
+</html>
